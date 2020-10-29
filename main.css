@@ -1,1 +1,67 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.card {
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.card__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.card__profile .card__bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.card__profile .card__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card__profile .card__image {
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+.card__1 {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 10%;
+  background-color: #733fc8;
+}
+
+.card__2 {
+  background-color: #48566a;
+}
+
+.card__4 {
+  background-color: #19212e;
+}
+
+.card__1 span,
+.card__1 small,
+.card__1 h2,
+.card__1 p,
+.card__2 span,
+.card__2 small,
+.card__2 h2,
+.card__2 p,
+.card__4 span,
+.card__4 small,
+.card__4 h2,
+.card__4 p {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
