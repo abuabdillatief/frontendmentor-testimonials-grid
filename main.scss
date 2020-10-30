@@ -1,39 +1,86 @@
-.card {
-  padding: 10px;
-  border: solid 1px black;
-  border-radius: 5px;
-  margin: 5px;
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Barlow", sans-serif;
 }
-
-.card__profile {
-  display: flex;
-  gap: 5px;
-  .card__bio {
+body {
+  background-color: #eef2f7;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
+  .card {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-  }
-  .card__name {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .card__image {
-    border-radius: 50%;
-    border: solid 2px black;
+    justify-content: flex-start;
+    gap: 45px;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    height: auto;
+    box-shadow: 4px 4px 30px rgba($color: #000000, $alpha: 0.35);
+    .card__description {
+      color: #8b9297;
+      letter-spacing: 1px;
+      line-height: 1.5rem;
+    }
+    .card__profile {
+      display: flex;
+      gap: 5px;
+      .card__bio {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+      }
+      .card__name {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .card__image {
+        border-radius: 50%;
+      }
+    }
   }
 }
+
 .card__1 {
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 10%;
   background-color: #733fc8;
+  grid-area: card1;
+  .card__image {
+    border: solid 3px #a775f2;
+  }
 }
 .card__2 {
   background-color: #48566a;
+  grid-area: card2;
+  .card__image {
+    border: solid 3px white;
+  }
+}
+.card__3 {
+  grid-area: card3;
+  background-color: white;
 }
 .card__4 {
   background-color: #19212e;
+  grid-area: card4;
+  .card__image {
+    border: solid 3px #733fc8;
+  }
+}
+.card__5 {
+  grid-area: card5;
+  background-color: white;
 }
 
 .card__1,
@@ -44,5 +91,26 @@
   h2,
   p {
     color: white;
+  }
+}
+
+@media (min-width: 240px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
   }
 }
